@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: rgb(138, 63, 209);
+      color: #333;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #0a0125;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      padding: 10px;
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      font-size: 18px;
+      margin: 0 15px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    nav ul li a:hover {
+      color: #b5f103;
+      transition: 0.3s;
+    }
+
+    .hero {
+      text-align: center;
+      padding-top: 120px;
+      padding: 120px 20px 40px;
+    }
+
+    .hero img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-size: 28pt;
+      color: white;
+    }
+
+    #aboutme {
+      width: 90%;
+      background-color: white;
+      margin: 30px auto;
+      padding: 20px;
+      
+    }
+
+    #aboutme h2 {
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px 0;
+    }
+
+    .container .image {
+      background-image: url("WhatsApp Image 2025-07-19 at 15.28.52_9ec4141d.jpg.jpg");
+      background-size: cover;
+      background-position: center;
+      width: 40%;
+      min-height: 250px;
+    }
+
+    .container .text {
+      width: 60%;
+      padding: 20px;
+    }
+
+    #projects {
+      width: 90%;
+      margin: 30px auto;
+      text-align: center;
+    }
+
+    #projects h2 {
+      color: white;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .project-1,
+    .project-2 {
+      background-color: white;
+      width: 300px;
+      height: 300px;
+      border-radius: 10px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-1 {
+      background-image: url("WhatsApp Image 2025-07-19 at 15.28.52_9ec4141d.jpg");
+    }
+
+    .project-2 {
+      background-image: url("WhatsApp Image 2025-07-19 at 15.28.52_9ec4141d.jpg");
+    }
+
+    .text {
+      position: absolute;
+      height: 70px;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      background: white;
+      padding: 10px;
+      box-sizing: border-box;
+      transition: 0.3s;
+    }
+
+    .text:hover {
+      height: 160px;
+    }
+
+    .text h3 {
+      margin: 0;
+    }
+
+    .text .content {
+      font-size: 14px;
+      margin: 10px 0;
+    }
+
+    
+    .contact-form {
+      background: linear-gradient(to bottom, #2c3e50, #4ca1af);
+      padding: 40px 20px;
+      color: white;
+    }
+
+    .form-main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .left,
+    .right {
+      width: 45%;
+    }
+
+    .left label,
+    .right label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .left input,
+    .right input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    footer {
+      background: black;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+   
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+
+      .container .image,
+      .container .text {
+        width: 100%;
+      }
+
+      .hero h1 {
+        font-size: 22pt;
+      }
+
+      .form-main {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .left,
+      .right {
+        width: 100%;
+      }
+
+      .project-1,
+      .project-2 {
+        width: 90%;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero h1 {
+        font-size: 36pt;
+      }
+
+      nav ul li a {
+        font-size: 22px;
+      }
+
+      .container .text p {
+        font-size: 18px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#aboutme">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <img src="WhatsApp Image 2025-07-19 at 15.28.52_9ec4141d.jpg" alt="Profile" />
+    <h1>Hello! Welcome to the University Of Chitral.</h1>
+  </section>
+
+  <section id="aboutme">
+    <h2>About Me</h2>
+    <div class="container">
+      <div class="image"></div>
+      
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="project-1">
+        <div class="text">
+          <h3>Uoch Official Website</h3>
+          <div class="content">
+            <p>University of Chitral Official Website Development</p>
+          </div>
+          <a target="_blank" href="http://uoch.edu.pk/">Visit Site</a>
+        </div>
+      </div>
+      <div class="project-2">
+        <div class="text">
+          <h3>Chitral Times</h3>
+          <div class="content">
+            <p>Official Website of Chitral Times</p>
+          </div>
+          <a target="_blank" href="http://chitraltimes.com/">Visit Site</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-form" id="contact">
+    <h3>Contact</h3>
+    <p></p>
+    <div class="form-main">
+      <div class="left">
+        <label>Name:</label>
+        <input type="text" placeholder="Enter your name" />
+        <label>Subject:</label>
+        <input type="text" placeholder="Enter your Subject" />
+        <label>Email:</label>
+        <input type="text" placeholder="Enter your Email" />
+      </div>
+      <div class="right">
+        <label>Message:</label>
+        <input type="text" placeholder="Enter your message" />
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    zubair@gmail.com.com
+  </footer>
+</body>
+</html>
